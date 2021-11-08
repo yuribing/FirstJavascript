@@ -56,6 +56,8 @@
       }
     ]
 
+    let score = 0;
+
     const quizLength = quiz.length;
     let quizIndex = 0;
     
@@ -74,6 +76,7 @@
     const clickHandler = (e) => {
       if (quiz[quizIndex].correct === e.target.textContent){
           window.alert('Correct!');
+          score++;
       } else {
           window.alert('Incorrect, study harder!');
       }
@@ -83,7 +86,7 @@
       if(quizIndex < quizLength){
           setupQuiz();
       }else{
-          window.alert('Finish!');
+          window.alert('Finish! Your score is '+score+'/'+quizLength);
       }
     }
 
