@@ -32,8 +32,11 @@
       'Protestant Reformation',
       'scientology'
       ];
+
     const correct = 'Protestant Reformation';
+    
     const $button = document.getElementsByTagName('button');
+    
     const setupQuiz = () =>{
       document.getElementById('hist-question').textContent = question;
       let buttonIndex =0;
@@ -43,40 +46,33 @@
         buttonIndex++;
       }
     }
+    
+    const clickHandler = (e) => {
+      if (correct === e.target.textContent){
+          window.alert('Correct!');
+        } else {
+          window.alert('Incorrect, study harder!');
+        }
+    }
+
     setupQuiz();
     // button[0].textContent = answers[0];
     // button[1].textContent = answers[1];
     // button[2].textContent = answers[2];
     // button[3].textContent = answers[3];
 
-      $button[0].addEventListener('click', () => {
-        if (correct === $button[0].textContent){
-          window.alert('Correct!');
-        } else {
-          window.alert('Incorrect, study harder!');
-        }
+      $button[0].addEventListener('click', (e) => {
+        clickHandler(e);
       });
 
-      $button[1].addEventListener('click', () => {
-        if (correct === $button[1].textContent){
-          window.alert('Correct!');
-        } else {
-          window.alert('Incorrect, study harder!');
-        }
+      $button[1].addEventListener('click', (e) => {
+        clickHandler(e);
       });
-      $button[2].addEventListener('click', () => {
-        if (correct === $button[2].textContent){
-          window.alert('Correct!');
-        } else {
-          window.alert('Incorrect, study harder!');
-        }
+      $button[2].addEventListener('click', (e) => {
+        clickHandler(e);
       });
-      $button[3].addEventListener('click', () => {
-        if (correct === $button[3].textContent){
-          window.alert('Correct, awesome!');
-        } else {
-          window.alert('Incorrect, study harder!');
-        }
+      $button[3].addEventListener('click', (e) => {
+        clickHandler(e);
       });
     </script>
 
