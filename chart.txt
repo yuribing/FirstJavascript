@@ -1,0 +1,20 @@
+----> Display Quiz
+|         | 
+|         |
+|         V
+|       Answer    
+|         | 
+|         | 
+|         V
+|     Check Anser (If Correct => Correct++)
+|         | 
+|         | 
+|         V
+|   Question is run out? (Question.Length => 0) --- Y ---> Show result (Correct/Total Question) and Finish
+|         |
+|         |
+|         N
+|         |
+|         |
+|         |
+|_________|
